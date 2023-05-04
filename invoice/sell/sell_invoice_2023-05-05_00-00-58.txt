@@ -1,0 +1,10 @@
+Invoice Number: S738645
+Date: 2023-05-05
+Customer Name: Reshma Adhikari
+Laptop Name: Razer Blade
+Price: $2000.00
+Quantity: 5
+Subtotal: $10000.00
+Shipping Cost: $50.00
+Total: $10050.00
+

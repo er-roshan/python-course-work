@@ -1,0 +1,11 @@
+Invoice Number: O738645
+Date: 2023-05-05
+Distributor Name: Dreamify Traders
+Laptop Name: Razer Blade
+Brand Name:  Razer
+Quantity: 10
+Net Amount: $22600.00
+VAT Amount: $2600.00
+Shipping Cost: $45.00
+Total: $22645.00
+

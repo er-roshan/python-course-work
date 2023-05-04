@@ -1,0 +1,7 @@
+Invoice Number: O738644
+Date: 2023-05-04
+Distributor Name: Dreamify Traders
+Laptop Name: Razer Blade
+Brand Name:  Razer
+Quantity: 5
+Net Amount: $11300.00
