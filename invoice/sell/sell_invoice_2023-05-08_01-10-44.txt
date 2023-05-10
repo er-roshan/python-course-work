@@ -1,0 +1,10 @@
+Invoice Number: S738648
+Date: 2023-05-08
+Customer Name: Sakira
+Laptop Name: XPS
+Price: $1976.00
+Quantity: 5
+Subtotal: $9880.00
+Shipping Cost: $50.00
+Total: $9930.00
+

@@ -1,0 +1,10 @@
+Invoice Number: S738648
+Date: 2023-05-08
+Customer Name: Sarika
+Laptop Name: Alienware
+Price: $1978.00
+Quantity: 4
+Subtotal: $7912.00
+Shipping Cost: $50.00
+Total: $7962.00
+

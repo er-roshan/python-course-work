@@ -1,0 +1,345 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "list_laptops",
+        "importPath": "stock",
+        "description": "stock",
+        "isExtraImport": true,
+        "detail": "stock",
+        "documentation": {}
+    },
+    {
+        "label": "list_laptops",
+        "importPath": "stock",
+        "description": "stock",
+        "isExtraImport": true,
+        "detail": "stock",
+        "documentation": {}
+    },
+    {
+        "label": "sell_laptop",
+        "importPath": "sell_laptop",
+        "description": "sell_laptop",
+        "isExtraImport": true,
+        "detail": "sell_laptop",
+        "documentation": {}
+    },
+    {
+        "label": "order_laptop",
+        "importPath": "order_laptop",
+        "description": "order_laptop",
+        "isExtraImport": true,
+        "detail": "order_laptop",
+        "documentation": {}
+    },
+    {
+        "label": "read_laptop_inventory",
+        "importPath": "file_handling",
+        "description": "file_handling",
+        "isExtraImport": true,
+        "detail": "file_handling",
+        "documentation": {}
+    },
+    {
+        "label": "update_laptop_inventory",
+        "importPath": "file_handling",
+        "description": "file_handling",
+        "isExtraImport": true,
+        "detail": "file_handling",
+        "documentation": {}
+    },
+    {
+        "label": "read_laptop_inventory",
+        "importPath": "file_handling",
+        "description": "file_handling",
+        "isExtraImport": true,
+        "detail": "file_handling",
+        "documentation": {}
+    },
+    {
+        "label": "update_laptop_inventory",
+        "importPath": "file_handling",
+        "description": "file_handling",
+        "isExtraImport": true,
+        "detail": "file_handling",
+        "documentation": {}
+    },
+    {
+        "label": "read_laptop_inventory",
+        "importPath": "file_handling",
+        "description": "file_handling",
+        "isExtraImport": true,
+        "detail": "file_handling",
+        "documentation": {}
+    },
+    {
+        "label": "update_laptop_inventory",
+        "importPath": "file_handling",
+        "description": "file_handling",
+        "isExtraImport": true,
+        "detail": "file_handling",
+        "documentation": {}
+    },
+    {
+        "label": "generate_order_invoice",
+        "importPath": "invoice",
+        "description": "invoice",
+        "isExtraImport": true,
+        "detail": "invoice",
+        "documentation": {}
+    },
+    {
+        "label": "write_buy_invoice_to_file",
+        "importPath": "invoice",
+        "description": "invoice",
+        "isExtraImport": true,
+        "detail": "invoice",
+        "documentation": {}
+    },
+    {
+        "label": "generate_sale_invoice",
+        "importPath": "invoice",
+        "description": "invoice",
+        "isExtraImport": true,
+        "detail": "invoice",
+        "documentation": {}
+    },
+    {
+        "label": "write_sell_invoice_to_file",
+        "importPath": "invoice",
+        "description": "invoice",
+        "isExtraImport": true,
+        "detail": "invoice",
+        "documentation": {}
+    },
+    {
+        "label": "tabulate",
+        "importPath": "tabulate",
+        "description": "tabulate",
+        "isExtraImport": true,
+        "detail": "tabulate",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "read_laptop_inventory",
+        "kind": 2,
+        "importPath": "file_handling",
+        "description": "file_handling",
+        "peekOfCode": "def read_laptop_inventory(file_path):\n    \"\"\"\n    Reads the laptop inventory from the given file and returns it as a list of dictionaries.\n    Each dictionary corresponds to a laptop and contains its name, brand, price, quantity, processor details,\n    and graphics card details.\n    \"\"\"\n    laptops = []\n    with open(file_path, 'r') as f:\n        for line in f:\n            # Split each line into its components and create a dictionary for the laptop",
+        "detail": "file_handling",
+        "documentation": {}
+    },
+    {
+        "label": "write_laptop_inventory",
+        "kind": 2,
+        "importPath": "file_handling",
+        "description": "file_handling",
+        "peekOfCode": "def write_laptop_inventory(file_path, laptops):\n    \"\"\"\n    Writes the given list of laptops to the given file in the appropriate format.\n    \"\"\"\n    with open(file_path, 'w') as f:\n        for laptop in laptops:\n            # Convert each laptop dictionary to a formatted string and write it to the file\n            line = '{},{},${},{},{},{}\\n'.format(laptop['name'], laptop['brand'], laptop['price'],\n                                                 laptop['quantity'], laptop['processor'], laptop['graphics_card'])\n            f.write(line)",
+        "detail": "file_handling",
+        "documentation": {}
+    },
+    {
+        "label": "update_laptop_inventory",
+        "kind": 2,
+        "importPath": "file_handling",
+        "description": "file_handling",
+        "peekOfCode": "def update_laptop_inventory(file_path, laptop_name, quantity_change, type):\n    \"\"\"\n    Updates the quantity of the laptop with the given name in the inventory file by the given amount.\n    \"\"\"\n    laptops = read_laptop_inventory(file_path)\n    updated = False\n    for laptop in laptops:\n        if laptop['name'] == laptop_name:\n            if(type == 'sell'):\n                laptop['quantity'] -= quantity_change",
+        "detail": "file_handling",
+        "documentation": {}
+    },
+    {
+        "label": "generate_sale_invoice",
+        "kind": 2,
+        "importPath": "invoice",
+        "description": "invoice",
+        "peekOfCode": "def generate_sale_invoice(customer_name, laptop_name, laptop_price, quantity, shipping_cost):\n    \"\"\"\n    Generates an invoice for a laptop sale.\n    \"\"\"\n    today = date.today()\n    invoice_number = 'S{:04d}'.format(today.toordinal())\n    subtotal = laptop_price * quantity\n    total = subtotal + shipping_cost\n    invoice = {\n        'invoice_number': invoice_number,",
+        "detail": "invoice",
+        "documentation": {}
+    },
+    {
+        "label": "generate_order_invoice",
+        "kind": 2,
+        "importPath": "invoice",
+        "description": "invoice",
+        "peekOfCode": "def generate_order_invoice(distributor_name, laptop_name, brand_name, quantity, net_amount, shipping_cost, vat_amount):\n    \"\"\"\n    Generates an invoice for a laptop order.\n    \"\"\"\n    today = date.today()\n    invoice_number = 'O{:04d}'.format(today.toordinal())\n    subtotal = net_amount + vat_amount\n    total = subtotal + shipping_cost\n    invoice = {\n        'invoice_number': invoice_number,",
+        "detail": "invoice",
+        "documentation": {}
+    },
+    {
+        "label": "write_sell_invoice_to_file",
+        "kind": 2,
+        "importPath": "invoice",
+        "description": "invoice",
+        "peekOfCode": "def write_sell_invoice_to_file(invoice):\n    timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')\n    directory = 'invoice/sell'\n    if not os.path.exists(directory):\n        os.makedirs(directory)\n    filename = '{}/sell_invoice_{}.txt'.format(directory, timestamp)\n    with open(filename, 'w') as file:\n        file.write('Invoice Number: {}\\n'.format(invoice['invoice_number']))\n        file.write('Date: {}\\n'.format(invoice['date']))\n        file.write('Customer Name: {}\\n'.format(invoice['customer_name']))",
+        "detail": "invoice",
+        "documentation": {}
+    },
+    {
+        "label": "write_buy_invoice_to_file",
+        "kind": 2,
+        "importPath": "invoice",
+        "description": "invoice",
+        "peekOfCode": "def write_buy_invoice_to_file(invoice):\n    timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')\n    directory = 'invoice/buy'\n    if not os.path.exists(directory):\n        os.makedirs(directory)\n    filename = '{}/buy_invoice_{}.txt'.format(directory, timestamp)\n    with open(filename, 'w') as file:\n        file.write('Invoice Number: {}\\n'.format(invoice['invoice_number']))\n        file.write('Date: {}\\n'.format(invoice['date']))\n        file.write('Distributor Name: {}\\n'.format(invoice['distributor_name']))",
+        "detail": "invoice",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main():\n    # Load the inventory from file\n    #inventory = read_laptop_inventory('inventory.txt')\n    while True:\n        print('''Welcome to my laptop shop!''')\n        # Prompt the user for the transaction type\n        print(\"\\nWhat type of transaction would you like to perform?\")\n        print(\"1. See Available Laptops\")\n        print(\"2. Sell a laptop\")\n        print(\"3. Buy a laptop\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "order_laptop",
+        "kind": 2,
+        "importPath": "order_laptop",
+        "description": "order_laptop",
+        "peekOfCode": "def order_laptop():\n    inventory = read_laptop_inventory('inventory.txt')\n    # Buy a laptop\n    distributor_name = input(\"Enter the name of the distributor: \")\n    laptop_name = input(\"Enter the name of the laptop: \")\n    quantity = int(input(\"Enter the quantity to buy: \"))\n    for laptop in inventory:\n        if laptop['name'] == laptop_name:\n            brand_name = laptop['brand']\n            net_amount = quantity * laptop['price']",
+        "detail": "order_laptop",
+        "documentation": {}
+    },
+    {
+        "label": "sell_laptop",
+        "kind": 2,
+        "importPath": "sell_laptop",
+        "description": "sell_laptop",
+        "peekOfCode": "def sell_laptop():\n    inventory = read_laptop_inventory('inventory.txt')\n    list_laptops()\n    # Sell a laptop\n    laptop_index = int(input(\"Enter the index of the laptop: \"))\n    #laptop_name = input(\"Enter the name of the laptop: \")\n    customer_name = input(\"Enter the name of the customer: \")\n    quantity = int(input(\"Enter the quantity sold: \"))\n    # date = input(\"Enter the date of sale (YYYY-MM-DD): \")\n    selected_laptop = inventory[laptop_index - 1]",
+        "detail": "sell_laptop",
+        "documentation": {}
+    },
+    {
+        "label": "list_laptops",
+        "kind": 2,
+        "importPath": "stock",
+        "description": "stock",
+        "peekOfCode": "def list_laptops():\n    print(\"List of Available Laptops\")\n    # Load the inventory from file\n    inventory = read_laptop_inventory('inventory.txt')\n    # create a list of index values\n    index = [i+1 for i in range(len(inventory))]\n    # print the array in a table design\n    print(tabulate(inventory, headers=\"keys\", showindex=index, tablefmt=\"fancy_grid\"))",
+        "detail": "stock",
+        "documentation": {}
+    },
+    {
+        "label": "validate_quantity",
+        "kind": 2,
+        "importPath": "validation",
+        "description": "validation",
+        "peekOfCode": "def validate_quantity(quantity):\n    \"\"\"\n    Validates the quantity input by the user.\n    \"\"\"\n    if not quantity.isnumeric():\n        return False\n    return True\ndef validate_price(price):\n    \"\"\"\n    Validates the price input by the user.",
+        "detail": "validation",
+        "documentation": {}
+    },
+    {
+        "label": "validate_price",
+        "kind": 2,
+        "importPath": "validation",
+        "description": "validation",
+        "peekOfCode": "def validate_price(price):\n    \"\"\"\n    Validates the price input by the user.\n    \"\"\"\n    if not re.match(r'^\\d+(\\.\\d{1,2})?$', price):\n        return False\n    return True\ndef validate_name(name):\n    \"\"\"\n    Validates the name input by the user.",
+        "detail": "validation",
+        "documentation": {}
+    },
+    {
+        "label": "validate_name",
+        "kind": 2,
+        "importPath": "validation",
+        "description": "validation",
+        "peekOfCode": "def validate_name(name):\n    \"\"\"\n    Validates the name input by the user.\n    \"\"\"\n    if not name.isalpha():\n        return False\n    return True\ndef validate_email(email):\n    \"\"\"\n    Validates the email input by the user.",
+        "detail": "validation",
+        "documentation": {}
+    },
+    {
+        "label": "validate_email",
+        "kind": 2,
+        "importPath": "validation",
+        "description": "validation",
+        "peekOfCode": "def validate_email(email):\n    \"\"\"\n    Validates the email input by the user.\n    \"\"\"\n    if not re.match(r'^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)?$', email):\n        return False\n    return True\ndef get_validated_input(prompt, validate_func):\n    \"\"\"\n    Prompts the user with the given message and returns the user's input only if it passes the validation function.",
+        "detail": "validation",
+        "documentation": {}
+    },
+    {
+        "label": "get_validated_input",
+        "kind": 2,
+        "importPath": "validation",
+        "description": "validation",
+        "peekOfCode": "def get_validated_input(prompt, validate_func):\n    \"\"\"\n    Prompts the user with the given message and returns the user's input only if it passes the validation function.\n    \"\"\"\n    while True:\n        user_input = input(prompt)\n        if validate_func(user_input):\n            return user_input\n        else:\n            print(\"Invalid input. Please try again.\")",
+        "detail": "validation",
+        "documentation": {}
+    },
+    {
+        "label": "validate_customer_name",
+        "kind": 2,
+        "importPath": "validation",
+        "description": "validation",
+        "peekOfCode": "def validate_customer_name(name):\n    \"\"\"\n    Returns True if the given name is not empty and contains only alphabetic characters and spaces.\n    \"\"\"\n    if name.replace(' ', '').isalpha():\n        return True\n    else:\n        return False\ndef validate_quantity(quantity):\n    \"\"\"",
+        "detail": "validation",
+        "documentation": {}
+    },
+    {
+        "label": "validate_quantity",
+        "kind": 2,
+        "importPath": "validation",
+        "description": "validation",
+        "peekOfCode": "def validate_quantity(quantity):\n    \"\"\"\n    Returns True if the given quantity is a positive integer.\n    \"\"\"\n    try:\n        quantity_int = int(quantity)\n        if quantity_int > 0:\n            return True\n        else:\n            return False",
+        "detail": "validation",
+        "documentation": {}
+    },
+    {
+        "label": "validate_shipping_cost",
+        "kind": 2,
+        "importPath": "validation",
+        "description": "validation",
+        "peekOfCode": "def validate_shipping_cost(cost):\n    \"\"\"\n    Returns True if the given shipping cost is a positive float.\n    \"\"\"\n    try:\n        cost_float = float(cost)\n        if cost_float > 0:\n            return True\n        else:\n            return False",
+        "detail": "validation",
+        "documentation": {}
+    },
+    {
+        "label": "validate_date",
+        "kind": 2,
+        "importPath": "validation",
+        "description": "validation",
+        "peekOfCode": "def validate_date(date_string):\n    \"\"\"\n    Returns True if the given date string is in the format 'YYYY-MM-DD' and corresponds to a valid date.\n    \"\"\"\n    try:\n        date_obj = datetime.strptime(date_string, '%Y-%m-%d')\n        if date_obj.year < 1900:\n            return False\n        else:\n            return True",
+        "detail": "validation",
+        "documentation": {}
+    }
+]
