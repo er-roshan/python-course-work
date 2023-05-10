@@ -64,6 +64,7 @@ def write_sell_invoice_to_file(invoice):
         file.write('Shipping Cost: ${:.2f}\n'.format(invoice['shipping_cost']))
         file.write('Total: ${:.2f}\n'.format(invoice['total']))
         file.write('\n')
+    print("Item sold and Invoice Generated")
 
 
 def write_buy_invoice_to_file(invoice):
@@ -84,3 +85,4 @@ def write_buy_invoice_to_file(invoice):
         file.write('Shipping Cost: ${:.2f}\n'.format(invoice['shipping_cost']))
         file.write('Total: ${:.2f}\n'.format(invoice['total']))
         file.write('\n')
+    print("Item ordered and Invoice Generated")
